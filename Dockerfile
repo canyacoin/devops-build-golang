@@ -11,9 +11,12 @@ RUN apt-get update && apt-get install -y \
     wget \
     git
 
-RUN go get \
+RUN go get -d \
+    github.com/ethereum/go-ethereum \
     github.com/op/go-logging \
     github.com/onsi/ginkgo/ginkgo \
     github.com/onsi/gomega
+
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 RUN curl https://glide.sh/get | sh
