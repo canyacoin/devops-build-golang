@@ -11,7 +11,7 @@ Cook a build container for GAE projects (with support for Go 1.11 runtime), for 
 #### Build
 
 ```
-docker build . -t registry.gitlab.com/canya-com/devops/gcloud-golang-111:X.X # <----- set the tag version plus one
+docker build . -t registry.gitlab.com/canyacoin/canyacore/devops/gcloud-golang-111:X.X # <----- set the tag version plus one
 ```
 
 Take note of the built imageID
@@ -19,7 +19,7 @@ Take note of the built imageID
 #### Push
 
 ```
-docker push registry.gitlab.com/canya-com/devops/gcloud-golang-111:X.X <----- set the tag version from the squash step
+docker push registry.gitlab.com/canyacoin/canyacore/devops/gcloud-golang-111:X.X <----- set the tag version from the squash step
 ```
 
 ## Running locally
@@ -27,5 +27,3 @@ docker push registry.gitlab.com/canya-com/devops/gcloud-golang-111:X.X <----- se
 ```
 docker run -it --entrypoint /bin/bash <imageID>
 ```
-
-docker push registry.gitlab.com/canya-com/devops/gcloud-golang-111:X.X
